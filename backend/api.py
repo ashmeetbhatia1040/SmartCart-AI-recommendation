@@ -13,9 +13,17 @@ from collections import Counter
 app = FastAPI(title="SmartCart AI API", version="1.0.0")
 
 # CORS configuration for frontend access
+# Allow both local development and production frontend URLs
+allowed_origins = [
+    "http://localhost:5173",  # Local Vite dev server
+    "http://localhost:3000",  # Alternative local port
+    "https://smart-cart-ai-recommendation-98k7.vercel.app",  # Production frontend
+    "https://*.vercel.app",  # Any Vercel preview deployments
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure for production
+    allow_origins=["*"],  # Allow all for now (configure specific origins above for production)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

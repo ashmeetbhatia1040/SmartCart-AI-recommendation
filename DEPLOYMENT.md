@@ -2,6 +2,31 @@
 
 Complete guide for deploying SmartCart AI to Vercel (Free Tier)
 
+## 🌍 Live Deployments
+
+- **Frontend**: https://smart-cart-ai-recommendation-98k7.vercel.app/
+- **Backend**: https://smart-cart-ai-recommendation.vercel.app/
+
+## ⚠️ IMPORTANT: Fix Connection Issue
+
+If you see "Failed to load products" or search doesn't work:
+
+### Quick Fix (Vercel Dashboard):
+
+1. Go to: https://vercel.com/dashboard
+2. Select your **frontend project** (smart-cart-ai-recommendation-98k7)
+3. Click **Settings** → **Environment Variables**
+4. Add new variable:
+   - **Name**: `VITE_API_URL`
+   - **Value**: `https://smart-cart-ai-recommendation.vercel.app`
+   - **Environments**: Check all (Production, Preview, Development)
+5. Click **Save**
+6. Go to **Deployments** → Click **...** on latest → **Redeploy**
+7. Wait for deployment (2-3 minutes)
+8. Test: https://smart-cart-ai-recommendation-98k7.vercel.app/
+
+---
+
 ## 📋 Pre-Deployment Checklist
 
 - ✅ Application works locally
