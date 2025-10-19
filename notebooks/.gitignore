@@ -1,0 +1,52 @@
+# Notebook outputs
+outputs/
+checkpoints/
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter
+.jupyter/
+*.ipynb_checkpoints
+
+# Model files (too large for git)
+*.npy
+*.pkl
+*.pth
+*.h5
+*.weights
+
+# Data files
+*.csv
+*.tsv
+*.json
+*.parquet
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
